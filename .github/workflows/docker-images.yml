@@ -8,6 +8,7 @@ on:
 
 env:
   REGISTRY: docker.io
+  IMAGE_OWNER: kok415
 
 jobs:
   build:
@@ -51,6 +52,6 @@ jobs:
           file: ${{ matrix.service.dockerfile }}
           push: true
           tags: |
-            ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ github.event.repository.name }}-${{ matrix.service.name }}:latest
+            ${{ env.REGISTRY }}/${{ env.IMAGE_OWNER }}/${{ github.event.repository.name }}-${{ matrix.service.name }}:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
