@@ -1,0 +1,20 @@
+# General
+__pycache__/
+*.py[cod]
+*.sqlite3
+.env
+.venv
+.vscode/
+.DS_Store
+.idea/
+
+# Backend
+backend/instance/
+backend/uploads/
+backend/.pytest_cache/
+backend/.coverage
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/

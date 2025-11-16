@@ -1,0 +1,37 @@
+
+
+🔹 Fonctionnement
+
+
+j'ai une appli kotlin sur ma tablette  qui envoie  des photos à l'api sur l'endpoint POST /images/add.
+
+l'api doit l'enregistrer dans une base de donnée sqlite
+
+les image sont enregister avec la date du jour
+
+
+sur le frontend, une page accessible avec un mot de passe ""admin" par defaut"
+affiche les images , dans l'ordre(le plus recent en tête)
+
+les image sont selectionable,
+
+une fois que 1 ou plusieurs images sont séléctionné, plusieurs options s'offre à nous à savoir:
+générer le code QR,
+supprimer
+
+le code QR contient le lien vers une page qui liste les images séléctionnées donc pas besoin de mot de passe pour accéder à cette page
+
+sur cette page, les utilisateurs  peuvent:
+selectionné certains des des images et les télécharger ou faire télécharger tout, ce qui télécharge individuellement les images concernées
+
+
+code source:
+
+repertoire frontend, backend 
+backend est un api Flask 
+frontend est un interface en vue.js 
+base de donnée en sqlite
+dockerfile pour front et pour backend
+.github/workflows  pour build et push les images docker du front et du back 
+
+
